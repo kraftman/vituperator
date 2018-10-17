@@ -19,3 +19,6 @@ Slack integration: request review once all other checks have passed
 
 Phase 3: 
 Assign requestors only once all checks have passed, to avoid excess spam
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/kraftman/vituperator.svg?style=flat-square
+[coverage]: https://codecov.io/github/kraftman/vituperator
