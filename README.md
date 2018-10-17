@@ -1,5 +1,6 @@
 # Vituperator
 
+[![Code Coverage][coverage-badge]][coverage]
 
 Vituperate
 - Blame or insult (someone) in strong or violent language.
