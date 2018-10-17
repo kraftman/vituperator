@@ -6,6 +6,9 @@ Vituperate
 
 This is a simple tool to enforce some standards with pull requests and reduce cross-boundary movement.
 
+- Fails any PR's that contain only a ticket ID
+- Fails any PR's that don't have an updated description
+
 Phase 1:
 Check the title isnt just a ticket number
 Check the body isnt the same as the pull request template
