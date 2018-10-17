@@ -1,33 +1,31 @@
-
-
-const validateTitle = (title) => {
-  title = title.trim()
-  if (title.match(/\w+\-\d+/g)) {
-    validation.state = 'failure'
-    validation.description = 'Title needs description not just ticket ID'
+const validateTitle = (validation, title) => {
+  title = title.trim();
+  if (title.match(/\w+-\d+/g)) {
+    validation.state = 'failure';
+    validation.description = 'Title needs description not just ticket ID';
   }
-}
+};
 
 const validateBody = (validation, body, template) => {
   if (body !== template) {
-    return
+    return;
   }
-  validation.state = 'failure'
-  validation.description = 'Description has not been updated'
-}
+  validation.state = 'failure';
+  validation.description = 'Description has not been updated';
+};
 
 const validate = (parsedHook, template) => {
   const validation = {
     state: 'success',
-    description: 'All checks passed'
-  }
-  
-  validateTitle(parsedHook.title)
-  
-  validateBody(parsedHook.body, template)
-  return validation
-}
+    description: 'All checks passed',
+  };
+
+  validateTitle(validation, parsedHook.title);
+
+  validateBody(validation, parsedHook.body, template);
+  return validation;
+};
 
 module.exports = {
-  validate
-}
+  validate,
+};

@@ -9,17 +9,31 @@
     "axios": "0.18.0",
     "dotenv": "6.1.0",
     "fastify": "1.12.1",
-    "node": "10.12.0",
-    "nodemon": "1.18.4"
+    "node": "10.12.0"
   },
   "scripts": {
     "start": "node index.js",
     "test": "mocha test/*",
-    "test-debug": "mocha --inspect-brk test/*"
-
+    "test-debug": "mocha --inspect-brk test/*",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "chai": "4.2.0",
-    "mocha": "5.2.0"
+    "eslint": "5.7.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "husky": "1.1.2",
+    "lint-staged": "7.3.0",
+    "mocha": "5.2.0",
+    "nodemon": "1.18.4",
+    "prettier": "1.14.3"
   }
 }
