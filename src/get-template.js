@@ -7,5 +7,7 @@ const getTemplate = async (username, repo, branch, file = 'PULL_REQUEST_TEMPLATE
   return result;
 }
 
-module.exports = getTemplate
+module.exports = {
+  getTemplate
+}
 
