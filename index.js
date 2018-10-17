@@ -1,20 +1,11 @@
 
-// need hook listener
-// description parser
-// sender
 
+const hook = require('./src/hook.js');
 const fastify = require('fastify')({
   logger: true
 })
 
-fastify.get('/', (req, res) => {
-  res.send({ hello: 'world' })
-})
-
-fastify.post('/hook', (request, reply) => {
-  console.log(request)
-  res.send('ok')
-})
+fastify.post('/hook', hook)
 
 fastify.listen(80, (err, address) => {
   if (err) throw err
