@@ -9,6 +9,9 @@ const prValidator = require('./prValidator.js')
 
 const handlePRUpdate = async (body) => {
   const parsedHook = hookParser.parse(body)
+  if (!parsedHook) {
+    return;
+  }
   const template = await templateLoader.getTemplate(username, repo, parsedHook.branch)
   const validation = prValidator.validate(parsedHook, template);
   const result = await statusSender.send(parsedHook.statusURL, validation)

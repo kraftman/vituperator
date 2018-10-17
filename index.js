@@ -5,6 +5,10 @@ const fastify = require('fastify')({
   logger: true,
 });
 
+fastify.get('/', (req, res) => {
+  res.send('ready')
+})
+
 fastify.post('/hook', async (req, res) => {
   await hook.handlePRUpdate(req.body)
   res.send('ok')
