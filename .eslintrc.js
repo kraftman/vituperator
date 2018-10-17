@@ -12,5 +12,7 @@ module.exports = {
   },
   extends: ['eslint:recommended', 'prettier'], // extending recommended config and config derived from eslint-config-prettier
   plugins: ['prettier'], // activating esling-plugin-prettier (--fix stuff)
-  
+  rules: {
+    "no-console": 'warn'
+  }
 };
