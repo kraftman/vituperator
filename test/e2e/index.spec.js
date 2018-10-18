@@ -15,13 +15,24 @@ const getFakePayload = () => {
   }
 }
 
-describe('test', () => {
-  it('test', async () => {
+describe('e2e tests', () => {
+  it('handles valid hook', async () => {
     const fakeHook = getFakePayload();
     const result = await fastify.inject({
       method: 'POST',
       url: '/hook',
       payload: fakeHook
+    })
+    result.body.should.equal('ok')
+  })
+
+  it('handles invalid hook', async () => {
+    const fakePayload = getFakePayload();
+    fakePayload.action = 'arsiten'
+    const result = await fastify.inject({
+      method: 'POST',
+      url: '/hook',
+      payload: fakePayload
     })
     result.body.should.equal('ok')
   })
