@@ -5,7 +5,7 @@
 Vituperate
 - Blame or insult (someone) in strong or violent language.
 
-This is a simple tool to enforce some standards with pull requests and reduce cross-boundary movement.
+This is a simple tool to enforce some standards with pull requests and reduce cross-boundary movement. 
 
 - Fails any PR's that contain only a ticket ID
 - Fails any PR's that don't have an updated description
