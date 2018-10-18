@@ -5,7 +5,8 @@ const getTemplate = async (username, repo, branch, file = 'PULL_REQUEST_TEMPLATE
   const url = `https://github.com/${username}/${repo}/raw/${branch}/${file}`;
 
   try {
-    return await axios.get(url)
+    const result = await axios.get(url)
+    return result.data;
   } catch(err) {
     console.log('err:', err)
     return ''
