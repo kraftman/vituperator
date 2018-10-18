@@ -1,5 +1,5 @@
 'use strict';
-const prvalidator = require('../../src/prValidator.js');
+const prvalidator = require('../../src/pr-validator.js');
 const chai = require('chai');
 chai.should();
 const getFakeHook = () => {

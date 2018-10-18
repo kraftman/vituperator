@@ -16,7 +16,7 @@ const createConfig = (statusURL, payload) => {
 
 const send = async (statusUrl, payload) => {
   const config = createConfig(statusUrl, payload);
-
+  console.log('sending to ', statusUrl, payload)
   try {
     const result = await axios(config);
     return result;

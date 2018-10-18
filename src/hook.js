@@ -5,7 +5,7 @@ const repo = 'vituperator';
 const hookParser = require('./hook-parser.js');
 const templateLoader = require('./get-template.js');
 const statusSender = require('./status-sender.js');
-const prValidator = require('./prValidator.js')
+const prValidator = require('./pr-validator.js')
 
 const handlePRUpdate = async (body) => {
   const parsedHook = hookParser.parse(body)
